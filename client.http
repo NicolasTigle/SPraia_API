@@ -1,0 +1,140 @@
+############################################
+# USUÁRIO
+############################################
+
+# Listar usuários
+GET http://localhost:8080/api/usuario
+###
+
+# Detalhes do usuário
+GET http://localhost:8080/api/usuario/2
+###
+
+# Cadastrar usuário
+POST http://localhost:8080/api/usuario
+Content-Type: application/json
+
+{
+
+	"nome": "Moca",
+	"email": "Moca@gmail.com",
+	"senha" : "123",
+	"dataNascimento": "20/05/2000"
+
+}
+###
+
+# Atualizar usuário
+PUT http://localhost:8080/api/usuario/3
+Authorization: Basic admin@gmail.com 123
+Content-Type: application/json
+
+{
+
+	"nome": "Mococa",
+	"email": "Mococa@gmail.com",
+	"senha" : "123"
+
+}
+###
+
+# Deletar usuário
+DELETE http://localhost:8080/api/usuario/2
+Authorization: Basic admin@gmail.com 123
+###
+
+############################################
+# PRAIA
+############################################
+
+# Listar praias
+GET http://localhost:8080/api/praia
+###
+
+# Detalhes da praia
+GET http://localhost:8080/api/praia/2
+###
+
+# Cadastrar praia
+POST http://localhost:8080/api/praia
+Content-Type: application/json
+Authorization: Basic admin@gmail.com 123
+
+{
+
+	"nome": "Praia",
+	"descricao": "Praia show",
+	"avaliacao": 10,
+	"qualidade": "Muito boa"
+
+}
+###
+
+# Atualizar praia
+PUT http://localhost:8080/api/praia/3
+Content-Type: application/json
+Authorization: Basic admin@gmail.com 123
+
+{
+
+	"nome": "Praia Legal",
+	"descricao": "Praia show",
+	"avaliacao": 10,
+	"qualidade": "Excelente"
+
+
+}
+###
+
+# Deletar praia
+DELETE http://localhost:8080/api/praia/2
+Authorization: Basic admin@gmail.com 123
+###
+
+############################################
+# DENÚNCIA
+############################################
+
+# Listar denúncias
+GET http://localhost:8080/api/denuncia
+###
+
+# Detalhes da denúncia
+GET http://localhost:8080/api/denuncia/2
+###
+
+# Cadastrar denúncia
+POST http://localhost:8080/api/denuncia
+Content-Type: application/json
+Authorization: Basic admin@gmail.com 123
+
+{
+
+	"descricao": "Muito lixo na praia",
+	"status": "Solicitada",
+	"tipo": "Plástico e Vidro",
+	"nivel": "Urgente"
+
+}
+###
+
+# Atualizar denúncia
+PUT http://localhost:8080/api/denuncia/3
+Content-Type: application/json
+Authorization: Basic admin@gmail.com 123
+
+{
+
+	"descricao": "Muito lixo plástico e vidro na praia",
+	"status": "Em processo",
+	"tipo": "Plástico e Vidro",
+	"nivel": "Urgente"
+
+
+}
+###
+
+# Deletar denúncia
+DELETE http://localhost:8080/api/denuncia/2
+Authorization: Basic admin@gmail.com 123
+###
